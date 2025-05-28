@@ -12,7 +12,8 @@ library(CausalSemiComp)
 library(Daniel)
 
 setwd("~/R projects/AAA PhD/Causal-effects-on-non-terminal-event-time-with-application")
-source("Estimands_numerical_example/Main_run/GetScenarioParams_paper.R") 
+source("Estimands_numerical_example/Main_run/GetScenarioParams_paper.R")
+source("Estimands_numerical_example/Main_run/run_functions.R")
 source("Estimands_numerical_example/Data_generation/SimDataWeibFrail.R")
 source("Estimands_numerical_example/Estimand_calculations/estimands_functions.R")
 source("Estimands_numerical_example/Estimand_calculations/CalcTrueCausalParams.R")
@@ -33,12 +34,7 @@ set.seed(scen_seed + match(lett,letters))
 #scen_values = c(5,9) 
 ##############################################
 
-'''scen_values = c(55,99)
-scen_values = c(511:513, 611:613)
-scen_values = c(1, 101, 5,9) # c(1,101)# c(1, 3, 5)
-scen_values = c(1, 101, 5,9)
-scen_values = c(1, 11, 101) '''
-scen_values = c(11, 13)
+scen_values = c(11, 13) #SM
 rho_values = c(0,0.5,1)
 scen_vec = rep(scen_values, each=length(rho_values))
 rho_vec = rep(rho_values, length(unique(scen_vec)))
@@ -58,7 +54,6 @@ for (i in 1:length(scen_vec)) {
                                                 my.data=my.data, r_vec=seq(1,1,0.5))
   estimands_mat = rbind(estimands_mat, all_estimands_mat_scen)
   
-  #my.data_lst[[ scen_vec[i] ]][[ first(which(rho_vec==rho_vec[i])) ]] = my.data
   # first argument - scen (theta in our case)
   # second argument - rho
   sum_my.data_lst[[ match(scen_vec, scen_values)[i] ]][[ first(which(rho_vec==rho_vec[i])) ]] = 

@@ -1,18 +1,9 @@
 Data_generation_func = function(scen, rho, tau, n.sample, dim_x){
   ##############################################################
   # set parameters ####
-  # GetScenarioParams_new from GetScenarioParams3.R
   params <- GetScenarioParams_new(scenario.num = scen)
   params$rho = rho
   R <- 100
-  #lapply(params,round,2)
-  # high scale (lambda = "1/lambda" in exponential dist) - high mean T
-  # high alpha (shape) - low mean T
-  # increase T1.0 (base.weib.scale.a0.01) - increasing the effect (hi I(0))
-  # increase T1.1 (base.weib.scale.a1.01) - reduce the effect (low I(1))
-  ##############################################################
-  
-  ##############################################################
   # generate the dataset ####
   Daniel::CatIndex(1)
   sim.df <- SimDataWeibFrail(n.sample = n.sample, params = params,
@@ -27,8 +18,6 @@ Data_generation_func = function(scen, rho, tau, n.sample, dim_x){
     ,T1.1 = sim.df$T1.1, T2.1 = sim.df$T2.1
     ,delta1.0 = sim.df$delta1.0, delta2.0 = sim.df$delta2.0
     ,delta1.1 = sim.df$delta1.1, delta2.1 = sim.df$delta2.1
-    #,T1 = sim.df$T1, T2 = sim.df$T2,
-    #,delta1 = sim.df$delta1, delta2 = sim.df$delta2
     ,A = sim.df$A, X = sim.df$X
     ,I_0 = ifelse(sim.df$T1.0 <= tau & sim.df$T1.0 <= sim.df$T2.0, 1, 0), S_0 = ifelse(sim.df$T2.0 >= tau, 1, 0)
     ,I_1 = ifelse(sim.df$T1.1 <= tau & sim.df$T1.1 <= sim.df$T2.1, 1, 0), S_1 = ifelse(sim.df$T2.1 >= tau, 1, 0))
