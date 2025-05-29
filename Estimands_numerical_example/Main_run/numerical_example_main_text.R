@@ -5,7 +5,6 @@ library(boot)
 library(ggplot2)
 library(ggpubr)
 library(reshape2)
-
 library(CausalSemiComp)
 library(Daniel)
 
@@ -21,10 +20,10 @@ install_github("daniel258/CausalSemiComp")
 
 
 scen_seed = 50001; lett = "a"
-scen = 1; tau = 1; n.sample = 500000; dim_x = 1 # n.sample = 30000000 
+scen = 1; tau = 1; n.sample = 30000000; dim_x = 1 # n.sample = 30000000 
 set.seed(scen_seed + match(lett,letters))
 
-scen_values = c(5,9) # main text # scen_values = c(11, 13) #SM
+scen_values = c(5,9) # main text
 rho_values = c(0,0.5,1)
 scen_vec = rep(scen_values, each=length(rho_values))
 rho_vec = rep(rho_values, length(unique(scen_vec)))
