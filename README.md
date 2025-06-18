@@ -20,9 +20,9 @@ Implements the core logic for calculating the presented estimands (SACE, FICE, a
 ----------------------------------
 
 Two main scripts (for the main text and the supplementary materials) that run the full pipeline:
-- Generating data using the `SimDataWeibFrail` script.
-- Applies estimand computations from `Estimand_calculations`
-- Produce summary results and the figures shown in the paper.
+- Generating data using the `SimDataWeibFrail` script, according to parameter values given in 'GetScenarioParams_paper' script.
+- Applying estimand computations from `CalcTrueCausalParams` script.
+- Producing summary results and the figures shown in the paper.
 
 (4) Example_results:
 ----------------------------------
@@ -31,7 +31,7 @@ A folder containing Rdata files with the results of the numerical example. This 
 
 
 
-## Notes
+## Note
 Ensure the path is modified to reflect the configuration of your local system.
 
   

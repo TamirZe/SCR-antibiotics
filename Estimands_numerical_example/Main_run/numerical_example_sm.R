@@ -8,6 +8,7 @@ library(reshape2)
 library(CausalSemiComp)
 library(Daniel)
 
+# set the path according to the configuration of your local system
 setwd("~/R projects/AAA PhD/Causal-effects-on-non-terminal-event-time-with-application")
 source("Estimands_numerical_example/Main_run/GetScenarioParams_paper.R") 
 source("Estimands_numerical_example/Main_run/run_functions.R") 
