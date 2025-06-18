@@ -20,7 +20,7 @@ Implements the core logic for calculating the presented estimands (SACE, FICE, a
 ----------------------------------
 
 Two main scripts (for the main text and the supplementary materials) that run the full pipeline:
-- Generating data using the `SimDataWeibFrail` script, according to parameter values given in 'GetScenarioParams_paper' script.
+- Generating data using the `SimDataWeibFrail` script, according to parameter values given in `GetScenarioParams_paper` script.
 - Applying estimand computations from `CalcTrueCausalParams` script.
 - Producing summary results and the figures shown in the paper.
 
