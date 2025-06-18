@@ -8,17 +8,19 @@ by Zehavi, Obolski, Chowers and Nevo.
 
 This repository includes three main folders, and an additional folder with simulation results files.
 
+(1) Data_generation:
+-----------------
 
-
-## Folder Structure
-
-### `Data_generation/`
 Contains R scripts used to generate datasets based on our simulation settings.
 
-### `Estimand_calculations/`
+(2) Estimand_calculations:
+----------------------------------
+
 Implements the core logic for calculating the presented estimands (SACE, FICE, and AICE). Includes a script that provides helper functions and procedures.
 
-### `Main_run/`
+(3) Main_run:
+----------------------------------
+
 Main scripts, for the main text and for the supplementary materials, separately, that run the full pipeline:
 - Loads data from `Data_generation`
 - Applies estimand computations from `Estimand_calculations`
