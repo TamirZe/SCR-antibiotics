@@ -111,3 +111,5 @@ sum_data_func = function(my.data){
               c = my.data %>% group_by(A) %>% summarise_all("mean") %>% print(width=Inf)))
 }
 ##############################################################
+
+dsadsada
