@@ -8,9 +8,9 @@ library(CausalSemiComp)
 #library(ggpubr)
 #library(reshape2)
 #library(boot)
+#Sys.unsetenv("GITHUB_PAT")
+#install_github("daniel258/CausalSemiComp")
 
-ddd= data.frame(a=1:3, b=4:6)
-ccc = ddd %>% filter(a==1)
 
 # set the path according to the configuration of your local system
 setwd("~/R projects/AAA PhD/Causal-effects-on-non-terminal-event-time-with-application")
@@ -19,9 +19,6 @@ source("Estimands_numerical_example/Main_run/run_functions.R")
 source("Estimands_numerical_example/Data_generation/SimDataWeibFrail.R")
 source("Estimands_numerical_example/Estimand_calculations/estimands_functions.R")
 source("Estimands_numerical_example/Estimand_calculations/CalcTrueCausalParams.R")
-
-#Sys.unsetenv("GITHUB_PAT")
-#install_github("daniel258/CausalSemiComp")
 
 
 scen_seed = 50001; lett = "a"
