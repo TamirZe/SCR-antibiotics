@@ -1,12 +1,16 @@
 library(dplyr)
 library(survival)
 library(devtools)
-library(boot)
 library(ggplot2)
-library(ggpubr)
-library(reshape2)
 library(CausalSemiComp)
-library(Daniel)
+
+#library(Daniel)
+#library(ggpubr)
+#library(reshape2)
+#library(boot)
+
+ddd= data.frame(a=1:3, b=4:6)
+ccc = ddd %>% filter(a==1)
 
 # set the path according to the configuration of your local system
 setwd("~/R projects/AAA PhD/Causal-effects-on-non-terminal-event-time-with-application")
@@ -16,12 +20,12 @@ source("Estimands_numerical_example/Data_generation/SimDataWeibFrail.R")
 source("Estimands_numerical_example/Estimand_calculations/estimands_functions.R")
 source("Estimands_numerical_example/Estimand_calculations/CalcTrueCausalParams.R")
 
-Sys.unsetenv("GITHUB_PAT")
-install_github("daniel258/CausalSemiComp")
+#Sys.unsetenv("GITHUB_PAT")
+#install_github("daniel258/CausalSemiComp")
 
 
 scen_seed = 50001; lett = "a"
-scen = 1; tau = 1; n.sample = 30000000; dim_x = 1 # n.sample = 30000000 
+scen = 1; tau = 1; n.sample = 10000; dim_x = 1 # n.sample = 30000000 
 set.seed(scen_seed + match(lett,letters))
 
 scen_values = c(5,9) # main text
