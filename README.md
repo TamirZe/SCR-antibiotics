@@ -28,10 +28,10 @@ that run the full pipeline:
 - Applying estimand computations from `CalcTrueCausalParams` script.
 - Producing summary results and the figures shown in the paper.
 
-For the current version V1, the script `numerical_example_estimands_and_bounds_V1` runs the full pipeline 
-(for both the main text and the supplementary materials, using `main_bool=TRUE` and `main_bool=FALSE`, respectively):
+For the current version V1, the script `numerical_example_estimands_and_bounds_V1` runs the full pipeline,
+for both the main text and the supplementary materials (using `main_bool=TRUE` and `main_bool=FALSE`, respectively):
 - Generating data using the `SimDataWeibFrail` script, according to parameter values given in `GetScenarioParams_paper` script.
-- Applying estimand computations from `CalcTrueCausalParams` script.
+- Applying estimand and bounds computations.
 - Producing summary results and the figures shown in the paper.
 
 (4) Example_results:
