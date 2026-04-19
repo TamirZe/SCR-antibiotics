@@ -42,6 +42,29 @@ A folder containing Rdata files with the results of the numerical example. This 
 
 The folders listed below are subfolders of the first main folder `Simulaion studies`.
 
+
+(1) Main_run_simulations:
+----------------------------------
+
+
+(1) Scripts_estimation_for_simulations:
+----------------------------------
+This folder containד the main **R scripts used for estimation procedures in the simulation studies**.
+This folder holds the **core estimation scripts** used after the datasets have already been generated (using the file `generate_datasets_for_sim` described below).
+
+Inside this folder, the following files are shown:
+
+- `EMcausalSC_GH_current_FICE_est_time`  
+  An R script that appears to implement the **EM-based estimation procedure** for the causal model, likely including the current version of the **FICE estimator** and timing-related components.
+
+- `CalcRMST_FICE_est`  
+  An R script that performs te monte carlo simulations, using the estimates obtained form the EM algorithm, from `EMcausalSC_GH_current_FICE_est_time`.
+
+
+(3) Summary_after_boot:
+----------------------------------
+
+
 ## Note
 Ensure the path is modified to reflect the configuration of your local system.
 
