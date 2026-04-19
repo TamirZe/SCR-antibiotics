@@ -45,12 +45,22 @@ The folders listed below are subfolders of the first main folder `Simulaion stud
 
 (1) Main_run_simulations:
 ----------------------------------
+`generate_datasets_for_sim` generates the simulated datasets.
+
+Its role is to:
+define the simulation scenarios, 
+and to generate synthetic dataset under a chosen data-generating mechanism (one parameter combination per each run),
+
+`clstr_main_FICE_est_sim_boot_time` executes the main estimation workflow (for the bounds and the frailty models), 
+including **point estimation and bootstrap procedure**.
 
 
-(1) Scripts_estimation_for_simulations:
+
+(2) Scripts_estimation_for_simulations:
 ----------------------------------
-This folder containד the main **R scripts used for estimation procedures in the simulation studies**.
-This folder holds the **core estimation scripts** used after the datasets have already been generated (using the file `generate_datasets_for_sim` described below).
+This folder contains the main **R scripts used for estimation procedures in the simulation studies**.
+This folder holds the **core estimation scripts** used after the datasets have already been generated 
+(using the file `generate_datasets_for_sim` described above).
 
 Inside this folder, the following files are shown:
 
@@ -63,9 +73,23 @@ Inside this folder, the following files are shown:
 
 (3) Summary_after_boot:
 ----------------------------------
+This folder contains the script `summary2_reduced_all_PO_paper` which conduct **post-estimation summaries**, 
+processing and aggregating results obtained after estimation.  
+
+It 
+(a) Calculates the true estimands from the target population to present these in the figure and tables we create.
+
+(b) Extracts the results from the point estimation process and the results obtained from the bootstrap,
+including both estimates for the causal estimands and for the model parameters.
+
+(c) Generates summary objects, tables, and derived results used for reporting the true estimands, the mean estimates,
+the estimates empirical standard deviation and their mean bootstrap-based standard error, and 95\% coverage rates.
+
+
+
 
 
 ## Note
-Ensure the path is modified to reflect the configuration of your local system.
+In all scripts mentioned above, ensure the path is modified to reflect the configuration of your local system.
 
   
