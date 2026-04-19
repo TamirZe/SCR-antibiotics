@@ -41,7 +41,8 @@ n_sim            <- 30000000
 set.seed(scen_seed + match(lett, letters))
 
 # helper functions from functions_calculations_sim
-#we can instead do source("Estimands_numerical_example/Simulation_studies/Summary_after_boot/functions_calculations_sim.R")
+#we can instead do:
+#source("Simulation_studies/Summary_after_boot/functions_calculations_sim.R")
 ########################################################
 calc_3 <- function(d, last_point=1, t_cut=1) {
   if (is.null(d)) return(c(FICE=NA_real_, SACE=NA_real_, AICE=NA_real_))
