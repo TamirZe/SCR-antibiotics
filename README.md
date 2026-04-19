@@ -22,9 +22,14 @@ Note that the files in this folder are used for the original version of the nume
 (3) Main_run:
 ----------------------------------
 
-For V0,
+For V0, in the folder `V0`, there are two main scripts (for the main text and the supplementary materials) 
+that run the full pipeline:
+- Generating data using the `SimDataWeibFrail` script, according to parameter values given in `GetScenarioParams_paper` script.
+- Applying estimand computations from `CalcTrueCausalParams` script.
+- Producing summary results and the figures shown in the paper.
 
-Two main scripts (for the main text and the supplementary materials) that run the full pipeline:
+For the current version V1, the script `numerical_example_estimands_and_bounds_V1` runs the full pipeline 
+(for both the main text and the supplementary materials, using `main_bool=TRUE` and `main_bool=FALSE`, respectively):
 - Generating data using the `SimDataWeibFrail` script, according to parameter values given in `GetScenarioParams_paper` script.
 - Applying estimand computations from `CalcTrueCausalParams` script.
 - Producing summary results and the figures shown in the paper.

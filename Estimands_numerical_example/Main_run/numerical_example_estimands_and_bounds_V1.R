@@ -22,7 +22,7 @@ source("Estimands_numerical_example/Estimand_calculations/CalcTrueCausalParams.R
 tau              <- 1
 scen_seed        <- 50001; lett <- "a"
 
-main_bool = TRUE # "main" or "SM"
+main_bool = TRUE # 
 scen_values_main      <- c(5, 7) # Main text (5: theta=1, 7: theta=2, 9 [original version]: theta=3) 
 scen_values_SM = c(11, 12) #SM (11: theta=1, 12: theta=2, 13 [original version]: theta=3)
 scen_values       <- if (main_bool) scen_values_main else scen_values_SM
