@@ -16,12 +16,14 @@ Contains R scripts named `SimDataWeibFrail`, used to generate datasets based on 
 ----------------------------------
 
 Implements the core logic for calculating the presented estimands (SACE, FICE, and AICE). Includes a script that provides helper functions and procedures.
-Note that these files are used for the original version of the numerical example (V0).
+
+Note that the files in this folder are used for the original version of the numerical example (V0).
 
 (3) Main_run:
 ----------------------------------
 
 For V0,
+
 Two main scripts (for the main text and the supplementary materials) that run the full pipeline:
 - Generating data using the `SimDataWeibFrail` script, according to parameter values given in `GetScenarioParams_paper` script.
 - Applying estimand computations from `CalcTrueCausalParams` script.
