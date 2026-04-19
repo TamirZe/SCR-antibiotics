@@ -47,9 +47,9 @@ The folders listed below are subfolders of the first main folder `Simulaion stud
 ----------------------------------
 `generate_datasets_for_sim` generates the simulated datasets.
 
-Its role is to:
+Its role is to
 define the simulation scenarios, 
-and to generate synthetic dataset under a chosen data-generating mechanism (one parameter combination per each run),
+and to generate synthetic dataset under a chosen data-generating mechanism (one parameter combination per each run).
 
 `clstr_main_FICE_est_sim_boot_time` executes the main estimation workflow (for the bounds and the frailty models), 
 including **point estimation and bootstrap procedure**.
