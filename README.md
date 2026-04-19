@@ -55,7 +55,7 @@ This folder holds the **core estimation scripts** used after the datasets have a
 Inside this folder, the following files are shown:
 
 - `EMcausalSC_GH_current_FICE_est_time`  
-  An R script that appears to implement the **EM-based estimation procedure** for the causal model, likely including the current version of the **FICE estimator** and timing-related components.
+  An R script that implements the **EM-based estimation procedure** for the causal model, likely including the current version of the **FICE estimator** and timing-related components.
 
 - `CalcRMST_FICE_est`  
   An R script that performs te monte carlo simulations, using the estimates obtained form the EM algorithm, from `EMcausalSC_GH_current_FICE_est_time`.
